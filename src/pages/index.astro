@@ -1,13 +1,13 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import PortfolioPreview from '../components/PortfolioPreview.astro';
-import type { Project } from '../types';
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import PortfolioPreview from "../components/PortfolioPreview.astro";
+import type { Project } from "../types";
 
 // Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob<Project>('./project/**/*.md');
+const projects = await Astro.glob<Project>("./project/**/*.md");
 const featuredProject = projects[0]!;
 
 // Full Astro Component Syntax:
@@ -45,7 +45,7 @@ const featuredProject = projects[0]!;
 
 			.gradient,
 			.gradient2 {
-				background-image: url('/assets/mesh-gradient.jpg');
+				background-image: url("/assets/mesh-gradient.jpg");
 				background-size: cover;
 				pointer-events: none;
 				mix-blend-mode: screen;
@@ -87,6 +87,7 @@ const featuredProject = projects[0]!;
 				font-size: var(--f-u6);
 				margin-bottom: 0.5rem;
 				margin-top: 0;
+				color: white;
 			}
 
 			@media (min-width: 750px) {
@@ -172,6 +173,7 @@ const featuredProject = projects[0]!;
 				font-size: var(--f-u1);
 				margin-top: 1.5rem;
 				margin-bottom: 0;
+				color: white;
 			}
 
 			.subtitle {
@@ -207,20 +209,31 @@ const featuredProject = projects[0]!;
 				width="1600"
 				height="1131"
 				class="img"
-				src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75"
-				srcset="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 800w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&q=75 1200w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=75 1600w,https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=2400&q=75 2400w"
+				src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+				srcset="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80 800w,https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80 1200w, https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80 1600w,https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80 2400w"
 				sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
 			/>
-			<div class="gradient"></div>
+			{/*<div class="gradient"></div> */}
 			<div class="gradient2"></div>
 			<div class="overlay">
 				<h1 class="title">
-					<small class="subtitle">Bringing you top-notch marketing at prices every small business can afford</small>Disruptive Marketing Group
+					<small class="subtitle"
+						>Bringing you top-notch marketing at prices every small
+						business can afford</small
+					>Disruptive Marketing Group
 				</h1>
 				<div class="roles">
-					<span class="role">👩‍💻 Web Design <span class="invert">👩‍💻 Developer</span></span>
-					<span class="role">🎤 Marketing Services <span class="invert">🎤 Speaker</span></span>
-					<span class="role">✏️ Branding <span class="invert">✏️ Writer</span></span>
+					<span class="role"
+						>👩‍💻 Web Design <span class="invert">👩‍💻 Developer</span>
+					</span>
+					<span class="role"
+						>🎤 Marketing Services <span class="invert"
+							>🎤 Speaker</span
+						>
+					</span>
+					<span class="role"
+						>✏️ Branding <span class="invert">✏️ Writer</span>
+					</span>
 				</div>
 				<p class="desc">Take a look at what we can do for you</p>
 			</div>
@@ -237,9 +250,16 @@ const featuredProject = projects[0]!;
 				<div class="section">
 					<h3 class="sectionTitle">About me</h3>
 					<p class="bio">
-						<span>Hello!</span> I’m Jeanine, and this is my website. It was made using{' '}
-						<a href="https://github.com/withastro/astro" target="_blank" rel="nofollow"> Astro</a>,
-						a new way to build static sites. This is just an example template for you to modify.
+						<span>Hello!</span> I’m Jeanine, and this is my website.
+						It was made using{" "}
+						<a
+							href="https://github.com/withastro/astro"
+							target="_blank"
+							rel="nofollow"
+						>
+							Astro</a
+						>, a new way to build static sites. This is just an
+						example template for you to modify.
 					</p>
 					<p>
 						<a href="/about">Read more</a>

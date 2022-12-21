@@ -51,7 +51,7 @@ const { content } = Astro.props;
 				margin-top: -2rem;
 				margin-bottom: -1rem;
 				color: white;
-				border-radius: 10px;
+				border-radius: 4px;
 
 				margin-left: 0px;
 			}
@@ -80,6 +80,12 @@ const { content } = Astro.props;
 				padding-bottom: 4em;
 				margin-bottom: 4em;
 			}
+			
+			.white {
+				color: white;
+				width: 50vw;
+				text-decoration: none;
+			}
 
 			footer {
 				text-align: center;
@@ -95,6 +101,7 @@ const { content } = Astro.props;
 			<div class="wrapper">
 				{content.tags.map((t) => <span class="tag">{t}</span>)}
 				<h3 class="tagline">{content.description}</h3>
+				<a href={content.link} class="button white">View Live Site</a>
 			</div>
 		</div>
 		<div class="wrapper">

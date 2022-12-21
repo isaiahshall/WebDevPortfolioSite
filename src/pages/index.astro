@@ -36,12 +36,6 @@ const featuredProject = projects[0]!;
 				}
 			}
 
-			.img {
-				display: block;
-				width: 100%;
-				{/*height: auto;*/}
-			}
-
 			.gradient,
 			.gradient2 {
 				background-image: url("/assets/mesh-gradient.jpg");
@@ -200,21 +194,44 @@ const featuredProject = projects[0]!;
 				text-align: center;
 				margin-top: 2em;
 			}
+
+			.imgMobile {
+				display: none;
+			}
+			
+			.imgDesktop {
+				display: block;
+				width: 100%;
+			}
+			@media only screen and (max-width: 768px) {
+  				.imgDesktop {
+					display: none;
+				}
+
+			
+
+			@media only screen and (max-width: 768px) {
+  				.imgMobile {
+    			display: block;
+  			}
 		</style>
 	</head>
 	<body>
 		<Nav />
 		<header class="hero">
 			<img
-				class="img"
-				srcset="/assets/Hero-Mobile.png 675w, /assets/Hero-Desktop.png 1920w"
-				{/*sizes="1920px"*/}
+				class="imgMobile"
+				src="/assets/Hero-Mobile.png"
+				/>
+			<img
+				class="imgDesktop"
+				src="/assets/Hero-Desktop.png"
 				/>
 		</header>
 		<main class="wrapper">
 			<div class="grid">
 				<div class="section">
-					<h3 class="sectionTitle">Selected Work</h3>
+					<h3 class="sectionTitle">Recent Work</h3>
 
 					<PortfolioPreview project={featuredProject} />
 					<div class="buttonContainer">

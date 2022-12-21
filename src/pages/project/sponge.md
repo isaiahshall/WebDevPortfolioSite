@@ -1,11 +1,12 @@
 ---
 layout: ../../layouts/project.astro
-title: Geo Currents
+title: Study Sponge 
+link: http://studysponge.co
 client: Self
-publishDate: 2020-03-02 00:00:00
-img: /assets/geocurrent.png
+publishDate: 2020-03-04 00:00:00
+img: /assets/sponge.png
 description: |
-  We built a research blog displaying the findings of an Ivy League professor.
+  We built a site for an app that helps people with homework and exams
 tags:
   - design
   - dev

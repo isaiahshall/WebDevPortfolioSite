@@ -11,7 +11,7 @@ const { frontmatter, url } = Astro.props.project;
 
 <div class="card">
 	<div class="titleCard" style={`background-image:url(${frontmatter.img})`}>
-		
+		<img src={frontmatter.img} class="image" />
 	</div>
 	<h1 class="title">{frontmatter.title}</h1>
 	<div class="descCard">
@@ -37,7 +37,7 @@ const { frontmatter, url } = Astro.props.project;
 		position: relative;
 		color: white;
 		background: black;
-		border: 1px solid #f0f0f0;
+		border: 0px;
 	}
 
 	.title {
@@ -57,9 +57,17 @@ const { frontmatter, url } = Astro.props.project;
 
 	.titleCard {
 		position: relative;
-		background-size: cover;
-		background-position: 100% 70%;
-		padding-top: 47.5%;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+		margin: -3px;
+
+		background-color: white;
+		
+	}
+
+	.image {
+		visibility: hidden;
 	}
 
 	.descCard {

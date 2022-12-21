@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/project.astro
-title: First Website
+title: Geo Currents
 client: Self
 publishDate: 2020-03-02 00:00:00
-img: /assets/GeoCurrents.png
+img: /assets/geocurrent.png
 description: |
-  We built an unofficial Mars Rover Landing site in celebration of NASA’s Perseverance Rover.
+  We built a research blog displaying the findings of an Ivy League professor.
 tags:
   - design
   - dev

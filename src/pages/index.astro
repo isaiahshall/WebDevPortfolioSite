@@ -13,12 +13,11 @@ const featuredProject = projects[0]!;
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-
 <html lang="en">
 	<head>
 		<MainHead
-			title="Jeanine White: Personal Site"
-			description="Jeanine White: Developer, Speaker, and Writer..."
+			title="Midwest Marketing Group"
+			description="MMG: Design, Development, Marketing, and more..."
 		/>
 		<style>
 			.wrapper {
@@ -33,14 +32,14 @@ const featuredProject = projects[0]!;
 
 			@media (min-width: 750px) {
 				.hero {
-					height: 45vw;
+					{/*height: 100vh;*/}
 				}
 			}
 
 			.img {
 				display: block;
 				width: 100%;
-				height: auto;
+				{/*height: auto;*/}
 			}
 
 			.gradient,
@@ -112,6 +111,7 @@ const featuredProject = projects[0]!;
 				font-size: var(--f-u8);
 				margin-top: 4rem;
 				margin-bottom: 2rem;
+				text-align: center;
 			}
 
 			.roles {
@@ -206,19 +206,16 @@ const featuredProject = projects[0]!;
 		<Nav />
 		<header class="hero">
 			<img
-				{/*width="1600"
-				height="1131" */}
-				height="1080"
 				class="img"
-				src="/assets/Hero-Mobile.svg"
-				srcset="/assets/Hero-Mobile.png 1920w, /assets/Hero-Mobile.png 945w"
-				sizes="(max-width: 1920px) 1920px, (max-width: 800px) 800px"
-			/>
+				srcset="/assets/Hero-Mobile.png 675w, /assets/Hero-Desktop.png 1920w"
+				{/*sizes="1920px"*/}
+				/>
 		</header>
 		<main class="wrapper">
 			<div class="grid">
 				<div class="section">
 					<h3 class="sectionTitle">Selected Work</h3>
+
 					<PortfolioPreview project={featuredProject} />
 					<div class="buttonContainer">
 						<a href="/projects/" class="button">View All</a>

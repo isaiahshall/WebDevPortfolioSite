@@ -10,55 +10,68 @@ import Nav from '../components/Nav.astro';
 		<style>
 			.heroImg {
 				max-height: 24rem;
-				object-fit: cover;
+				object-fit: contain;
 				overflow: hidden;
-			}
-
-			.heroImg img {
-				width: 100%;
+				width:fit-content;
+				margin-left: auto;
+				margin-right: auto;
 			}
 
 			.bio {
-				font-size: var(--f-u1);
+				font-size: var(--f-u0);
 				line-height: 2;
 				margin-top: 4em;
 			}
 
 			.wrapper.bio {
 				max-width: 50em;
+				width: 85%;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: justify;
+				padding: 0em;
+
+			}
+
+			.title {
+				text-align: center;
+				font-size: var(--f-u6);
+			}
+			.bold {
+				font-weight: 400;
 			}
 		</style>
 	</head>
 	<body>
 		<Nav />
 		<div class="wrapper">
-			<h1>About Midwest Marketing Group</h1>
+			<h1 class="title">About Midwest Marketing Group</h1>
 			<div class="heroImg">
 				<img
-					width="1400"
-					height="350"
-					src="https://images.unsplash.com/photo-1581977012607-4091712d36f9?auto=format&fit=crop&w=1400&h=350&q=75"
+					width="500"
+					height="100%"
+					src="/assets/About-Hero.png"
 				/>
 			</div>
 			<div class="bio wrapper">
 				<p>
+					<strong>Hello!</strong> Midwest Marketing Group is a full-service digital marketing agency founded by partners Isaiah Hall and John Poppen. With a combined 8 years of experience in the industry, Isaiah and John have a wealth of knowledge and expertise in all aspects of digital marketing, from social media and email marketing to content creation and search engine optimization.
+
+					At Midwest Marketing Group, we are dedicated to helping our clients achieve their business goals through innovative and effective marketing strategies. Whether you are a small business looking to increase your online presence or a large corporation seeking to drive traffic and sales, we have the tools and expertise to help you succeed.
+					
+					With a team of skilled professionals and a commitment to delivering the best possible results for our clients, Midwest Marketing Group is the partner you can trust to take your business to the next level.
+				</p>
+				<p>
 				
 					Isaiah has always been fascinated by technology and knew that he wanted to pursue a career in computer science. So, when it came time to choose a college, he decided to attend one of the best computer science programs in the country.
-<p>
+				</p>
 					
 					John, on the other hand, is more interested in marketing and branding. He wanted to learn how to create compelling campaigns and build strong relationships with customers. So, he decided to attend a top-ranked marketing program at a different university.
 					
 				<p>
-					So, we decided to start our own company, combining Isaiah's expertise in computer science with John's skills in marketing. We work tirelessly to help bring local businesses a greater online presence to better enhance the customer experience online and in person. Our goal 
-					is to work closely with local businesses to emphasize the parts of their company that need highlighting.
+					So, the decision was made to start our own company, combining Isaiah's expertise in computer science with John's skills in marketing. At MMG, we work tirelessly to help bring local businesses a greater online presence to better enhance their customer experience online and in person. Our goal 
+					is to work closely with business owners to emphasize the parts of their company that need highlighting.
 				</p>
-				<p>
-					
-				</p>
-				<p>
-					
-				</p>
-				<p>
 					
 			</div>
 		</div>

@@ -96,14 +96,14 @@ const featuredProject = projects[0]!;
 
 			@media (min-width: 1200px) {
 				.grid {
-					grid-template-columns: 2fr 1fr;
+					grid-template-columns: 70% 30%;
 				}
 			}
 
 			.sectionTitle {
 				font-weight: 700;
 				font-size: var(--f-u8);
-				margin-top: 4rem;
+				margin-top: 1rem;
 				margin-bottom: 2rem;
 				text-align: center;
 			}
@@ -180,6 +180,7 @@ const featuredProject = projects[0]!;
 			.bio {
 				line-height: 2;
 				margin-bottom: 2rem;
+				text-align: justify;
 			}
 
 			.bio > span:first-of-type {
@@ -203,6 +204,7 @@ const featuredProject = projects[0]!;
 				display: block;
 				width: 100%;
 			}
+
 			@media only screen and (max-width: 768px) {
   				.imgDesktop {
 					display: none;
@@ -230,7 +232,7 @@ const featuredProject = projects[0]!;
 		</header>
 		<main class="wrapper">
 			<div class="grid">
-				<div class="section">
+				<div class="section workSection">
 					<h3 class="sectionTitle">Recent Work</h3>
 
 					<PortfolioPreview project={featuredProject} />
@@ -238,20 +240,23 @@ const featuredProject = projects[0]!;
 						<a href="/projects/" class="button">View All</a>
 					</div>
 				</div>
-				<div class="section">
+				<div class="section servicesSection">
+					<img
+				class=""
+				src="/assets/services.png"/>
+					</div>
+				
+			</div>
+			<div class="section aboutSection">
 					<h3 class="sectionTitle">About Us.</h3>
 					<p class="bio">
-						<span>Hello!</span> Disruptive Marketing Group is a full-service digital marketing agency founded by partners Isaiah Hall and John Poppen. With a combined 15 years of experience in the industry, Isaiah and John have a wealth of knowledge and expertise in all aspects of digital marketing, from social media and email marketing to content creation and search engine optimization.
+						<span>Hello!</span> Midwest Marketing Group was founded by Isaiah Hall and John Poppen, two experienced professionals with a passion for digital marketing. Isaiah studied at Stanford with previous experience in web development from a few companies, including Microsoft. John studied at Indiana University's Kelly School of Business, and has extensive experience in sales and marketing. Together, they have a combined 8 years of experience in the industry.
 
-						At Disruptive Marketing Group, we are dedicated to helping our clients achieve their business goals through innovative and effective marketing strategies. Whether you are a small business looking to increase your online presence or a large corporation seeking to drive traffic and sales, we have the tools and expertise to help you succeed.
-						
-						With a team of skilled professionals and a commitment to delivering the best possible results for our clients, Disruptive Marketing Group is the partner you can trust to take your business to the next level.
-					</p>
+At Midwest Marketing Group, we offer a wide range of digital marketing services, including website design and development, photography and videography, and much more. Our team is dedicated to helping businesses reach their full potential through innovative and effective marketing strategies. Whether you're looking to improve your online presence or drive more traffic to your website, we have the skills and expertise to help you succeed. Contact us today to learn more about how we can help your business grow.</p>
 					<p>
 						<a href="/about">Read more</a>
 					</p>
 				</div>
-			</div>
 		</main>
 		<Footer />
 	</body>

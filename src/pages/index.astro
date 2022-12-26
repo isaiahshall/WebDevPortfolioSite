@@ -8,7 +8,7 @@ import type { Project } from "../types";
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob<Project>("./project/**/*.md");
-const featuredProject = projects[0]!;
+const featuredProject = projects[1]!;
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -29,6 +29,54 @@ const featuredProject = projects[0]!;
 				position: relative;
 				overflow: hidden;
 			}
+
+			.servicesSection {
+				margin-top: 0rem;
+			}
+
+			.sectionTitle {
+				text-align: center;
+			}
+
+			.serviceTitle {
+				text-align: center;
+				
+				display: block;
+				font-weight: 700;
+				font-size: var(--f-u2);
+				margin-top: 2rem;
+			}
+
+			.servicesTitle {
+				margin-bottom: -0.5rem;
+			}
+
+			.blueLine {
+				border: 3px solid #446DEB;
+				width: 16em;
+				border-radius: 5px;
+				margin-top: -0.5rem;
+				margin-bottom: 1rem;
+			}
+			.bullets {
+				list-style-type: none;
+				line-height: 1.75;
+				letter-spacing: -1;
+				margin-bottom: -0.5rem;
+				text-align: center;
+
+			}
+
+			.listItem {
+				margin-bottom: 0.25rem;
+			}
+
+
+			.aboutTitle {
+				padding-top: 3rem;
+			}
+			
+
 
 			@media (min-width: 750px) {
 				.hero {
@@ -96,7 +144,7 @@ const featuredProject = projects[0]!;
 
 			@media (min-width: 1200px) {
 				.grid {
-					grid-template-columns: 70% 30%;
+					grid-template-columns: 50% 50%;
 				}
 			}
 
@@ -240,15 +288,48 @@ const featuredProject = projects[0]!;
 						<a href="/projects/" class="button">View All</a>
 					</div>
 				</div>
-				<div class="section servicesSection">
-					
+								{/*<div class="section servicesSection">
+					<img
+				class=""
+				src="/assets/services.png"/> 
+					</div> */}
+					<div class="section servicesSection">
+				<h3 class="sectionTitle servicesTitle">Our Services</h3>
+				<h4 class="serviceTitle">Web Design and Development</h4>
+				<hr class="blueLine">
+				<div class="bullets">
+					<a class="listItem">Visual/Functional Design and Content Generation/Copywriting
+						</a>
+						</div>
+				<h4 class="serviceTitle">Website Hosting and Maintenance</h4>
+				<hr class="blueLine">
+				<div class="bullets">
+					<a class="listItem">Publicizing your website, adding new content, fixing any errors, and updating the website's design/features.
+						</a>
+						</div>
 				
-			
-					</div>
-				
+				<h4 class="serviceTitle">Photo and Video</h4>
+				<hr class="blueLine">
+				<div class="bullets">
+					<a class="listItem">Capture your location's true uniqueness through personalized photo or video shoots, bringing a more genuine feel to your online presence.
+						</a>
+	
+						</div>
+						<h4 class="serviceTitle">Branding</h4>
+				<hr class="blueLine">
+				<div class="bullets">
+					<a class="listItem">Develop and strengthen your brand strategy and visual identity, such as a logo and color palette, as well as developing marketing materials and campaigns to promote your brand.
+						</a>
+						</div>
+				<h4 class="serviceTitle">Digital Advertising</h4>
+				<hr class="blueLine">
+				<div class="bullets">
+					<a class="listItem">Promote your products or services online through various digital channels such as Search Engine Optimization (SEO), pay-per-click (PPC) advertising, social media, and email marketing to help you reach and engage with your target audience. </a>
+						</div>
+			</div>
 			</div>
 			<div class="section aboutSection">
-					<h3 class="sectionTitle">About Us.</h3>
+					<h3 class="sectionTitle aboutTitle">About Us.</h3>
 					<p class="bio">
 						<span>Hello!</span> Midwest Marketing Group was founded by Isaiah Hall and John Poppen, two experienced professionals with a passion for digital marketing. Isaiah studied at Stanford with previous experience in web development from a few companies, including Microsoft. John studied at Indiana University's Kelly School of Business, and has extensive experience in sales and marketing. Together, they have a combined 8 years of experience in the industry.
 

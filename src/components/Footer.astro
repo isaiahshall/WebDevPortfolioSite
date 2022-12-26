@@ -1,18 +1,68 @@
 ---
 const currentYear = new Date().getFullYear();
+
 ---
 
 <footer>
+	<div class="contact">
+		<a class="entry" href="mailto:Sales@midewestmarketinggroup.co"><i class="material-icons icon">email</i>Sales@MidwestMarketingGroup.co</a>
+		<a class="entry" href="tel:+1-320-428-1807"><i class="material-icons icon">phone</i>(320) 428-1807</a>
+		<p class="entry"><i class="material-icons icon">pin_drop</i>St. Cloud, Minnesota</p>
+	</div>
+	<hr class="break">
 	&copy; {currentYear} Midwest Marketing Group
 	<small class="byline">🚀 Built by US</small>
+	<script src="//code.tidio.co/z7vcrh5cp1z5xkl4sgj90zo6css1kqxj.js" async></script>	
 </footer>
 <style>
 	footer {
 		text-align: center;
-		padding-top: 8rem;
+		margin-top: 8rem;
+		padding-top: 3rem;
 		padding-right: 2rem;
 		padding-bottom: 4rem;
 		padding-left: 2rem;
+		background-color: black;
+		color: white;
+	}
+
+	.contact {
+		margin-bottom: -0rem;
+		display: grid;
+		grid-gap: 0px;
+		height: 100px;
+		max-width: 100vw;
+	}
+
+	hr.break {
+		width: 80%;
+		margin-bottom: 2rem;
+		border: 1.5px solid #464646;
+
+		border-radius: 10px;
+	}
+
+	.entry {
+		margin-top: -20px;
+		margin-bottom: -20px;
+		color: white;
+		text-decoration-color: white;
+		accent-color: white;
+		text-decoration: none;
+		
+	}
+
+	@media (min-width: 1200px) {
+				.contact {
+					grid-template-columns: 33% 33% 33%;
+				}
+			}
+
+	.icon {
+		position: relative;
+		top: 10px;
+		right: 5px;
+		font-size: 2rem;
 	}
 
 	.byline {

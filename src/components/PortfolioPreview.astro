@@ -42,14 +42,15 @@ const { frontmatter, url } = Astro.props.project;
 
 	.title {
 		font-size: var(--f-u1);
-		font-weight: 900;
+		font-weight: 700;
 		letter-spacing: 0.0625em;
 		padding: 15px 25px;
 		background-color: black;
 		width: fit-content;
-		position: relative;
-		margin-top: -2rem;
-		margin-bottom: -1rem;
+		max-width: 60%;
+		position: absolute;
+		margin-top: -2.2rem;
+		margin-bottom: 0rem;
 		color: white;
 		border-radius: 4px 4px 0px 0px;
 		margin-left: 0px;
@@ -57,10 +58,11 @@ const { frontmatter, url } = Astro.props.project;
 
 	.titleCard {
 		position: relative;
-		background-size: contain;
+		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		margin: -3px;
+		margin: 0px;
+		padding: 0px;
 
 		background-color: white;
 		
@@ -77,7 +79,7 @@ const { frontmatter, url } = Astro.props.project;
 	.desc {
 		font-size: var(--f-u1);
 		line-height: 1.4;
-		margin-top: 0em;
+		margin-top: 1em;
 		margin-bottom: 1em;
 	}
 

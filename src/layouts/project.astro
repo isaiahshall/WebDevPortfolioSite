@@ -15,9 +15,25 @@ const { content } = Astro.props;
 	<head>
 		<MainHead title={content.title} description={content.description} />
 		<style>
+			
+			.hero-wrap {
+				width: fit-content;
+				display: inline-block;
+				padding-left: auto;
+				margin-right: 0;
+				height: fit-content
+			}
 			.hero {
 				padding-bottom: 0;
 				vertical-align: center;
+				object-fit:fill;
+				margin-top: 0em;
+				margin-bottom: 0em;
+				display: block;
+  				margin-left: auto;
+  				margin-right: auto;
+  				width: 100%;
+				max-width: 800px;
 			}
 
 			.tag {
@@ -40,19 +56,19 @@ const { content } = Astro.props;
 			}
 
 			.title {
-				font-size: var(--f-u3);
-				font-weight: 900;
+				font-size: var(--f-u1);
+				font-weight: 700;
 				text-transform: uppercase;
 				letter-spacing: 0.0625em;
-				padding: 20px 40px;
+				padding: 20px 35px 20px 35px;
 				background-color: black;
 				width: fit-content;
-				position: relative;
-				margin-top: -2rem;
-				margin-bottom: -1rem;
+				max-width: 60%;
+				position:absolute;
+				margin-top: -2.2em;
+				margin-bottom: -20px;
 				color: white;
 				border-radius: 4px;
-
 				margin-left: 0px;
 			}
 
@@ -65,7 +81,7 @@ const { content } = Astro.props;
 
 			.tagline {
 				font-weight: 300;
-				font-size: var(--f-u3);
+				font-size: var(--f-u1);
 				line-height: 1.5;
 			}
 
@@ -79,6 +95,7 @@ const { content } = Astro.props;
 			.wrapper {
 				padding-bottom: 4em;
 				margin-bottom: 4em;
+				margin-top: 0;
 			}
 			
 			.white {
@@ -95,13 +112,15 @@ const { content } = Astro.props;
 	</head>
 	<body>
 		<Nav />
-		<img src={content.img} class="hero" />
+		<div class="">
+		<img src={content.img} class="hero" height={650} width={940}/>
+		</div>
 		<h3 class="title">{content.title}</h3>
 		<div class="leadIn">
 			<div class="wrapper">
 				{content.tags.map((t) => <span class="tag">{t}</span>)}
 				<h3 class="tagline">{content.description}</h3>
-				<a href={content.link} class="button white">View Live Site</a>
+				<a href={content.link} class="button white">View</a>
 			</div>
 		</div>
 		<div class="wrapper">

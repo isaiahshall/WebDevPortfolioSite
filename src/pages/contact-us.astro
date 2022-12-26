@@ -1,0 +1,68 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Not Found" />
+		<style>
+			.wrapper {
+				margin-top: 2em;
+				margin-bottom: 2em;
+				position: relative;
+				margin-left: auto;
+				margin-right:auto;
+				display: block;
+				width: fit-content;
+				font-size: var(--f-u1);
+			
+			}
+
+			.form {
+				display: grid;
+				background-color: white;
+			}
+
+			.label {
+				font-weight: 600;
+				font-size: 5em;
+			}
+
+			.cover {
+				width: 100%;
+				height: 100px;
+				background-color: black;
+				margin-top: -6rem;
+				z-index: 0;
+			}
+
+			.button {
+				text-decoration: none;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				text-align: center;
+			}
+			
+			.emaillink {
+				text-decoration: none;
+				color: #446DEB;
+				font-weight: 600;
+			}
+		</style>
+	</head>
+	<body>
+		<Nav />
+		<div class="wrapper">
+			<p><strong>Email:</strong><a class="emaillink" href="mailto:sales@midwestmarketinggroup.co"> Sales@MidwestMarketingGroup.co</a></p>
+			<p><strong>Location:</strong> Based out of St. Cloud, Minnesota</p>
+			<p><strong>Phone:</strong> (320) 428-1807</p>
+			<div class="buttonContainer">
+				<a class="button" href="javascript:;" onclick="tidioChatApi.display(true);tidioChatApi.open()">Send Us a Message</a>
+			</div>
+</div>
+			<Footer />
+	</body>
+</html>

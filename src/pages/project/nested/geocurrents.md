@@ -3,10 +3,10 @@ layout: ../../../layouts/project.astro
 title: GeoCurrents.info
 link: http://geocurrents.info
 client: Self
-publishDate: 2020-03-02 00:00:00
+publishDate: 2022-12-01 00:00:00
 img: /assets/geocurrent.png
 description: |
-  GeoCurrents is Stanford Professor Martin W. Lewis's Research Blog. We helped him rebrand is site and taught him how to self-improve his SEO.
+  GeoCurrents is Stanford Professor Martin W. Lewis's Research Blog. We helped him rebrand is site and taught him how to self-improve his SEO. 
 tags:
   - design
   - dev
